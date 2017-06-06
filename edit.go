@@ -166,8 +166,8 @@ func (e *Edit) KeyHandler(ev termbox.Event) bool {
 			e.display[inString:]...)
 
 		// cursor left magic
-		if e.cx == e.trueX + 1 {
-			if e.at > e.trueW - 1 {
+		if e.cx == e.trueX+1 {
+			if e.at > e.trueW-1 {
 				e.cx = e.trueW - 1
 			} else {
 				e.cx = e.at
