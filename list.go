@@ -155,7 +155,7 @@ func (l *List) Resize() {
 	}
 
 	// check if we need to update l.at
-	if l.at != 0 && l.at + l.trueH >= len(l.content) {
+	if l.at != 0 && l.at+l.trueH >= len(l.content) {
 		l.at = len(l.content) - l.trueH
 		if l.at < 0 {
 			l.at = 0
