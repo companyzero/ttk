@@ -481,6 +481,10 @@ func flush() {
 	for y := 0; y < focus.y; y++ {
 		for x := 0; x < focus.x; x++ {
 			c := focus.getCell(x, y)
+			if c == nil {
+				// out of range, should not happen
+				continue
+			}
 			if !c.dirty {
 				// skip unchanged cells
 				continue

@@ -88,14 +88,20 @@ func (w *Window) printf(x, y int, a Attributes, format string,
 // setCell shall be called from queue context.
 func (w *Window) setCell(x, y int, c Cell) {
 	c.dirty = true
-	w.backingStore[x+(y*w.x)] = c
+	pos := x + (y * w.x)
+	if pos < len(w.backingStore) {
+		w.backingStore[pos] = c
+	}
 }
 
 // getCell returns the content of the window cell at the x and y coordinate.
 // getCell shall be called from queue context.
 func (w *Window) getCell(x, y int) *Cell {
-	c := &w.backingStore[x+(y*w.x)]
-	return c
+	pos := x + (y * w.x)
+	if pos < len(w.backingStore) {
+		return &w.backingStore[pos]
+	}
+	return nil
 }
 
 // resize sets new x and y maxima.
