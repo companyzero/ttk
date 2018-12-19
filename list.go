@@ -94,6 +94,16 @@ func (l *List) Focus() {
 	// do nothing
 }
 
+// Len returns the number of lines in this List widget.
+func (l *List) Len() int {
+	return len(l.content)
+}
+
+// Len returns the width of the List widget.
+func (l *List) Width() int {
+	return l.trueW
+}
+
 // NewList is the List initializer.  This call implements the NewWidget
 // convention by taking a *Window and and an anchor point to render the widget.
 func NewList(w *Window, x, y int) (Widgeter, error) {
