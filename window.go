@@ -73,7 +73,6 @@ func (w *Window) printf(x, y int, a Attributes, format string,
 				c.Bg = cc.Bg
 				rw = skip
 				continue
-
 			}
 		}
 

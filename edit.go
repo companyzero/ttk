@@ -33,7 +33,7 @@ type Edit struct {
 	target     *string // result value of action
 	display    []rune  // target as runes
 	at         int     // start of displayed text
-	width      int     // prefered widget width
+	width      int     // preferred widget width
 	cx         int     // current cursor x position
 	cy         int     // current cursor y position
 	prevX      int     // previous window max x

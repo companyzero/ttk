@@ -12,5 +12,5 @@ type Key struct {
 	Key    termbox.Key      // special key
 	Ch     rune             // normal key
 	Window Windower         // window that contains widget
-	Widget Widgeter         // widget that emmitted key
+	Widget Widgeter         // widget that emitted key
 }

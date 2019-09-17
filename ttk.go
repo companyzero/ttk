@@ -91,7 +91,7 @@ func Color(at, fg, bg int) (string, error) {
 }
 
 // DecodeColor decodes an ANSI color escape sequence and ignores trailing
-// characters.  It returns an Attributs type that can be used directly in
+// characters.  It returns an Attributes type that can be used directly in
 // termbox (note that the termbox colors are off by one).  The skip contains
 // the location of the next character that was not consumed by the escape
 // sequence.
@@ -170,7 +170,6 @@ func EscapedLen(s string) int {
 				rw = skip
 				total += skip
 				continue
-
 			}
 		}
 		rw = width
@@ -194,7 +193,6 @@ func Unescape(s string) string {
 			if err == nil {
 				rw = skip
 				continue
-
 			}
 		}
 		ret += string(v)

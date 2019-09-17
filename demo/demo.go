@@ -36,7 +36,7 @@ func (mw *mainWindow) Init(w *ttk.Window) {
 	})
 
 	// edit box
-	var s string = "12345"
+	s := "12345"
 	mw.e = w.AddEdit(2, 4, -2, &s)
 
 	var s2 string
@@ -89,7 +89,7 @@ func (sw *secondWindow) Init(w *ttk.Window) {
 	})
 
 	// edit box
-	var s string = "abc"
+	s := "abc"
 	sw.e = w.AddEdit(2, 14, -2, &s)
 	ttk.Flush()
 }

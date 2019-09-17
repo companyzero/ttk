@@ -266,7 +266,7 @@ func (l *List) Display(where Location) {
 				}
 				continue
 			} else if i < len(s) {
-				// we do this unecessary song and dance to only
+				// we do this unnecessary song and dance to only
 				// assign leftover once
 				continue
 			}
